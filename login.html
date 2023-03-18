@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
     <title>Login</title>
     <link rel="icon" href="assets/images/logo.png">
     <link rel="stylesheet" href="assets/vendor1/bootstrap/css/bootstrap.min.css" type="text/css">
@@ -27,7 +28,7 @@
     <header class="">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a title="logo" href="index.html" class="navbar-brand"><img src="assets/images/My project.png" alt="logo"></a>
+                <a title="logo" href="index.html" class="navbar-brand"><img src="assets/images/logo.png" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -62,7 +63,7 @@
             </div>
             <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
                 <!-- <a title="logo" href="index.html"><img src="assets/images/logo.png" alt="logo"></a> -->
-                <form class="login100-form validate-form" action="index.html">
+                <form class="login100-form validate-form" action="index.html" method="POST">
                     <span class="login100-form-title p-b-49">
                         
 						Login
@@ -110,7 +111,7 @@
                             <i class="fa fa-twitter"></i>
                         </a>
 
-                        <a href="#" title="google" class="login100-social-item bg3">
+                        <a href="#" title="google" id="my-signin2" class="login100-social-item bg3">
                             <i class="fa fa-google"></i>
                         </a>
                     </div>
@@ -284,19 +285,39 @@
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
             © 2023 Copyright:
-            <a class="text-white" href="https://trapthedeal.com/">TrapTheDeal</a
-  >
-</div>
+            <a class="text-white" href="https://trapthedeal.com/">TrapTheDeal</a>
+        </div>
 <!-- Copyright -->
-</footer>
-<script src="assets/vendor1/jquery/jquery-3.2.1.min.js"></script>
-<script src="assets/vendor1/animsition/js/animsition.min.js"></script>
-<script src="assets/vendor1/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/vendor1/bootstrap/js/popper.js"></script>
-<script src="assets/vendor1/daterangepicker/moment.min.js"></script>
-<script src="assets/vendor1/daterangepicker/daterangepicker.js"></script>
-<script src="assets/vendor1/countdowntime/countdowntime.js"></script>
-<script src="assets/js/main.js"></script>
+    </footer>
+    <script>
+        function onSuccess(googleUser) {
+            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+        }
+        function onFailure(error) {
+            console.log(error);
+        }
+        function renderButton() {
+            gapi.signin2.render('my-signin2', {
+            'scope': 'profile email',
+            'width': 240,
+            'height': 50,
+            'longtitle': true,
+            'theme': 'dark',
+            'onsuccess': onSuccess,
+            'onfailure': onFailure
+        });
+    }
+    </script>
+
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <script src="assets/vendor1/jquery/jquery-3.2.1.min.js"></script>
+    <script src="assets/vendor1/animsition/js/animsition.min.js"></script>
+    <script src="assets/vendor1/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/vendor1/bootstrap/js/popper.js"></script>
+    <script src="assets/vendor1/daterangepicker/moment.min.js"></script>
+    <script src="assets/vendor1/daterangepicker/daterangepicker.js"></script>
+    <script src="assets/vendor1/countdowntime/countdowntime.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
