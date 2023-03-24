@@ -17,7 +17,7 @@
     <header class="">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a title="logo" href="index.html" class="navbar-brand"><img src="assets/images/logo.png" alt="logo"></a>
+                <a title="logo" href="index.html" class="navbar-brand"><img src="assets/images/My project.png" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -62,41 +62,41 @@
                 </div>    
                 <div class="row border-top border-bottom">
                     <div class="row main align-items-center">
-                        <div class="col-2"><img title="cart" class="img-fluid" alt="" src="assets/images/fan1.JPG"></div>
+                        <div class="col-2"><img title="cart" class="img-fluid" alt="" src="https://th.bing.com/th/id/OIP.1p1vGgP45YuFJp6YbdRIzwHaGf?pid=ImgDet&rs=1"></div>
                         <div class="col">
-                            <div class="row text-muted">Fan</div>
-                            <div class="row">Fan</div>
+                            <div class="row text-muted">Chess Board</div>
+                            <div class="row">Chess</div>
                         </div>
                         <div class="col">
                             <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
                         </div>
-                        <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
+                        <div class="col">&#x20b9; 500 <span class="close">&#10005;</span></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="row main align-items-center">
-                        <div class="col-2"><img title="cart" alt="" class="img-fluid" src="assets/images/i1.jpg"></div>
+                        <div class="col-2"><img title="cart" alt="" class="img-fluid" src="https://th.bing.com/th/id/OIP.kXx3fghpj_rcvnuokjkzYAHaE8?pid=ImgDet&rs=1"></div>
                         <div class="col">
-                            <div class="row text-muted">Iron</div>
-                            <div class="row">Iron</div>
+                            <div class="row text-muted">Volleyball</div>
+                            <div class="row">Volleyball</div>
                         </div>
                         <div class="col">
                             <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
                         </div>
-                        <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
+                        <div class="col">&#x20b9; 360 <span class="close">&#10005;</span></div>
                     </div>
                 </div>
                 <div class="row border-top border-bottom">
                     <div class="row main align-items-center">
-                        <div class="col-2"><img title="" alt="" class="img-fluid" src="assets/images/mg2.jpg"></div>
+                        <div class="col-2"><img title="" alt="" class="img-fluid" src="https://th.bing.com/th/id/OIP.J3WmFFLATKedb330TqaFnQHaHa?pid=Imget&rs=D1"></div>
                         <div class="col">
-                            <div class="row text-muted">Mixer Grinder</div>
-                            <div class="row">Mixer Grinder</div>
+                            <div class="row text-muted">Jumping Rope</div>
+                            <div class="row">Jumping Rope</div>
                         </div>
                         <div class="col">
                             <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
                         </div>
-                        <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
+                        <div class="col">&#x20b9; 100 <span class="close">&#10005;</span></div>
                     </div>
                 </div>
                 <div class="back-to-shop"><a href="index.html">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
@@ -106,17 +106,25 @@
                 <hr>
                 <div class="row">
                     <div class="col" style="padding-left:0;">ITEMS 3</div>
-                    <div class="col text-right">&euro; 132.00</div>
+                    <div class="col text-right">&#x20b9; 960</div>
                 </div>
                 <form>
                     <p>SHIPPING</p>
-                    <select title="select"><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
+                    <select title="select"><option class="text-muted">Standard-Delivery- &#x20b9;70</option></select>
                     <p>GIVE CODE</p>
                     <input id="code" placeholder="Enter your code">
                 </form>
+                <div class="row"  style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                    <div class="col" >Item Total</div>
+                    <div class="col text-right" id="item-total">&#x20b9; 1030</div>
+                </div>
                 <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
-                    <div class="col">TOTAL PRICE</div>
-                    <div class="col text-right">&euro; 137.00</div>
+                    <div class="col">Discount</div>
+                    <div class="col text-right" id="discount"> </div>
+                </div>
+                <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                    <div class="col">Payment Amount</div>
+                    <div class="col text-right" id="payment-total"> </div>
                 </div>
                 <a href="#">
                     <button class="btn">CHECKOUT</button>
@@ -236,7 +244,7 @@
 
                 <ul>
                     <li>
-                        <a title="playstore" href="">
+                        <a title="playstore" href="#">
                             <img src="assets/images/playstore.png" alt="">
                         </a>
                     </li>
@@ -254,12 +262,12 @@
             <!-- Section: Social media -->
             <section class="mb-4 text-center">
                 <!-- Facebook -->
-                <a title="button" href="#!" role="button">
+                <a href="#!" role="button" title="button">
                     <img src="assets/images/icons8-facebook-48.png" alt="">
                 </a>
 
                 <!-- Twitter -->
-                <a href="#!" title="button" role="button" style="padding-left: 10px;">
+                <a href="#!" role="button" style="padding-left: 10px;" title="button">
                     <img src="assets/images/icons8-twitter-48.png" alt="">
                 </a>
 
@@ -290,5 +298,6 @@
     <script src="assets/js/slick.js"></script>
     <script src="assets/js/isotope.js"></script>
     <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/cart.js"></script>
 </body>
 </html>
